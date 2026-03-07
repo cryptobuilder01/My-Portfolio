@@ -258,7 +258,6 @@ html {
     font-weight: 600;
     color: var(--primary);
     width: 100px;
-    order: 1;
 }
 .bar {
     background: #eee;
@@ -267,9 +266,8 @@ html {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    order: 2;
 }
-.bar .fill {
+.fill{
     height: 100%;
     transition: width 0.6s ease;
 }
@@ -277,11 +275,10 @@ html {
     width: 50px;
     text-align: right;
     color: var(--text-dark);
-    order: 3;
 }
 .fill.html {width:95%; background:red;}
 .fill.css {width:90%; background:blue;}
-.fill.js  {width:80%; background:gold;}
+.fill.js  {width:90%; background:gold;}
 .fill.py  {width:85%; background:blue;}
 .fill.php {width:65%; background:purple;}
 
@@ -320,16 +317,29 @@ html {
 
 /* work gallery */
 .img_main {
+    width: 100%;
     padding: 60px 20px;
     text-align: center;
     background: var(--bg-dark);
     color: var(--text-light);
 }
+hr{
+    padding: 2px;
+    margin-bottom: 90px;
+    background-color:blue;
+}
 .img_main .container {
     margin: 0 auto;
     max-width: var(--max-width);
 }
-.work_img, .second_work {
+.first_img{
+    width:53%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+.work_img, .second_work{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -354,7 +364,9 @@ html {
     max-width: var(--max-width);
 }
 .contact_info {
+    width:100%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
@@ -363,6 +375,7 @@ html {
 .contact_info > div {
     background: whitesmoke;
     padding: 20px;
+    flex-wrap: wrap;
     border-radius: 5px;
     max-width: 200px;
     text-align: center;
